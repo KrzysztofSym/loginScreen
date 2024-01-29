@@ -14,12 +14,13 @@
         <div class="wrapper">
             <h3>Log in</h3>
             <div class="user mail">
-                <label>Email</label>
-                <input type="text" placeholder="Enter your email address">
+                <label id="email_label">Email</label>
+                <input type="email" id="email_field" placeholder="Enter your email address" name="mail">
+                <span id="email_error">error msg</span>
             </div>
             <div class="user pass">
                 <label>Password</label>
-                <input type="text" placeholder="Enter your password">
+                <input type="text" placeholder="Enter your password" name="pass">
             </div>
             <button class="btn">Log in</button>
             <p>Or</p>

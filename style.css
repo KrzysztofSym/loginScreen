@@ -189,10 +189,13 @@ body {
 }
 
 .wrapper {
-    padding: 4rem;
-    padding-bottom: 0;
+    margin: 4rem;
+    min-width: 200px;
+    margin-bottom: 0;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
+    
 }
 
 .wrapper h3 {
@@ -209,6 +212,7 @@ body {
 
 .user {
     margin-bottom: 1rem;
+    position: relative;
 }
 
 .user input {
@@ -217,6 +221,29 @@ body {
     background: var(--clr-bg-main);
     border-radius: 3px;
     padding: .8rem;
+
+}
+
+.mail input {
+    position: relative;
+}
+
+.mail > span {
+    color: red;
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+    transform: translateX(-150px);
+    transition: .2s;
+}
+
+.mail > span.active {
+    transform: translateX(0);
+    width: 22ch;
+    white-space: nowrap;
+    animation: typing 1s steps(22), ease-in-out .3s;
+    overflow: hidden;
+    
 }
 
 .wrapper > p {
@@ -249,3 +276,9 @@ body {
         margin: 1rem auto;
     }
 }
+
+@keyframes typing {
+    from {
+      width: 0
+    }
+  }
